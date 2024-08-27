@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-#wnflv3c8s^k))4y5&y84&8*94*cna-2v(&z32$$yzadew52fu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['trust24.pythonanywhere.com']
 
 
 # Application definition
@@ -93,10 +93,10 @@ WSGI_APPLICATION = 'handwashing.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ahw',                  # Database name
-        'USER': 'root',                      # Database user
-        'PASSWORD': '19tr99na',              # Database password
-        'HOST': 'localhost',                   # Database host (leave empty for localhost)
+        'NAME': 'trust24$autodb',                  # Database name
+        'USER': 'trust24',                      # Database user
+        'PASSWORD': '19_na_90',              # Database password
+        'HOST': 'trust24.mysql.pythonanywhere-services.com',                   # Database host (leave empty for localhost)
         'PORT': '3306', 
     }
 }
