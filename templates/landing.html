@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="{% static 'css/landing.css' %}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-left">
+            <img src="{% static 'images/icons/autowash_icon.png' %}" alt="Auto Wash Icon" class="icon">
+            <span class="header-title">AUTOWASH</span>
+        </div>
+        <div class="header-center">
+            <!-- Top Navigation Bar -->
+            <nav class="top-nav">
+                <a href="{% url 'help_land' %}" class="nav-link">Help</a>
+                <a href="{% url 'contact_land' %}" class="nav-link">Contact Us</a>
+                <a href="{% url 'about_land' %}" class="nav-link">About</a>
+                <a href="{% url 'admin:index' %}" class="nav-link">Admin Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="wrapper">
+        <div class="container">
+            <!-- Welcome Back Message -->
+            <p id="welcome-back-msg" class="hidden">Welcome back!</p>
+            <h1>Welcome Back!</h1>
+            <div class="buttons">
+                <a href="{% url 'login' %}" class="login-btn">User Login</a>
+                <a href="{% url 'signup' %}" class="signup-btn">Sign Up</a>
+                <a href="{% url 'stay_logged_out' %}" class="logout-btn">Stay Logged Out</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; AutoWash 2024, All rights reserved!</p>
+    </footer>
+
+    <!-- JavaScript to Check for 'Welcome Back' Message -->
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            // Check if the session storage contains the visited flag
+            if (sessionStorage.getItem('visitedWebsite')) {
+                // Display the welcome back message
+                document.getElementById('welcome-back-msg').classList.remove('hidden');
+                // Remove the visited flag from session storage
+                sessionStorage.removeItem('visitedWebsite');
+            }
+        });
+    </script>
+</body>
+</html>
