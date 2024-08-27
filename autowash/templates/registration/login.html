@@ -20,17 +20,6 @@
             {{ form.as_p }}
             <button type="submit" class="btn">Login</button>
         </form>
-        <div class="social-login">
-            <h3>Or login with</h3>
-            <a href="{% provider_login_url 'google' %}" class="social-button google-login">
-                <img src="{% static 'images/google-icon.jpeg' %}" alt="Google" class="social-icon">
-                <span>Login with Google</span>
-            </a>
-            <a href="{% provider_login_url 'microsoft' %}" class="social-button microsoft-login">
-                <img src="{% static 'images/microsoft-icon.jpeg' %}" alt="Microsoft" class="social-icon">
-                <span>Login with Microsoft</span>
-            </a>
-        </div>
     </div>
 
     <script>
