@@ -112,3 +112,8 @@ nav ul li a.active {
 .y-axis-label {
     font-size: 12px;
 }
+@media only screen and (max-width: 600px) {
+    .button-container {
+        flex-direction: column;
+    }
+}
